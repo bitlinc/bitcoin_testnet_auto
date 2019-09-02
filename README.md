@@ -1,5 +1,4 @@
-
-# RaspiBolt: systemd unit for bitcoind testnet
+# Auto Start Bitcoind Testnet On Boot
 # /etc/systemd/system/bitcoind_testnet.service
 
 [Unit]
@@ -8,7 +7,7 @@ After=network.target
 
 [Service]
 ExecStartPre=/bin/sh -c 'sleep 10'
-ExecStart=/usr/local/bin/bitcoind -daemon -conf=/home/bitcoin/.bitcoin/testnet3/bitcoin.conf -pid=/home/bitcoin/.bitcoin/testnet3/bitcoind.pid
+ExecStart=/usr/local/bin/bitcoind -daemon -pid=/home/bitcoin/.bitcoin/testnet3/bitcoind.pid
 PIDFile=/home/bitcoin/.bitcoin/testnet3/bitcoind.pid
 User=bitcoin
 Group=bitcoin
