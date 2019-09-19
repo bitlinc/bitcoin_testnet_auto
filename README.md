@@ -7,8 +7,8 @@ After=network.target
 
 [Service]
 ExecStartPre=/bin/sh -c 'sleep 10'
-PIDFile=/home/pi/.bitcoin/testnet3/bitcoind.pid
-ExecStart=/usr/local/bin/bitcoind -testnet
+ExecStart=/usr/local/bin/bitcoind -daemon -testnet -conf=/home/bitcoin/.bitcoin/bitcoin.conf -pid=/home/bitcoin/.bitcoin/bitcoind.pid
+PIDFile=/home/bitcoin/.bitcoin/bitcoind.pid
 User=pi
 Group=pi
 Type=forking
