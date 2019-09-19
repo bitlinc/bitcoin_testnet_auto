@@ -7,7 +7,7 @@ After=network.target
 
 [Service]
 ExecStartPre=/bin/sh -c 'sleep 10'
-PIDFile=/home/bitcoin/.bitcoin/testnet3/bitcoind.pid
+PIDFile=/home/pi/.bitcoin/testnet3/bitcoind.pid
 ExecStart=/usr/local/bin/bitcoind -testnet
 User=bitcoin
 Group=bitcoin
