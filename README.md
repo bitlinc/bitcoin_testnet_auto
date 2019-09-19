@@ -14,8 +14,8 @@ Group=pi
 Type=forking
 KillMode=process
 Restart=always
-TimeoutSec=120
-RestartSec=30
+TimeoutSec=360
+RestartSec=120
 
 [Install]
 WantedBy=multi-user.target
